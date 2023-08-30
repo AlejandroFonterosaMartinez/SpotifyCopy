@@ -1,39 +1,23 @@
   @import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Kanit&family=Oswald:wght@500&display=swap');
 
   body {
-      margin: 0;
+      margin: 10px;
       padding: 0;
-
+      background-color: black;
+      overflow: hidden;
+      margin-top: 20px;
   }
 
 
   /* -------------------------------------------------------------- NAVBAR -------------------------------------------------------------- */
-  .navbar {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 0;
-  }
-
-  .buscador {
-      margin-left: 250px;
-  }
-
-  .perfil {
-      margin-left: 1200px;
-  }
-
-  @media (max-width: 768px) {
-      .buscador {
-          margin-left: 0;
-      }
-
-      .perfil {
-          margin-left: auto;
-      }
-  }
 
   /* -------------------------------------------------------------- SIDEBAR -------------------------------------------------------------- */
+  nav {
+      margin-top: 1px;
+      background-color: #000000;
+      border-radius: 10px;
+  }
+
   li>a:hover {
       color: rgb(214, 214, 214);
       transition: color 1.2s;
@@ -41,6 +25,7 @@
   }
 
   #sample {
+    background-color: #121212;
       color: #a7a7a7;
       padding: 10px;
       border-radius: 10px;
@@ -78,6 +63,89 @@
   }
 
 
+  /* -------------------------------------------------------------- MAIN -------------------------------------------------------------- */
+  main {
+      border-radius: 10px;
+      margin: 5px;
+      background-color: #121212;
+  }
+
+  .rounded {
+      width: 30px;
+      height: 30px;
+      color: white;
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, .7);
+
+  }
+
+  .btn_lft {
+      position: relative;
+      left: 90%;
+  }
+
+
+
+  .cont-1 {
+      opacity: 0.9;
+      border-radius: 5px;
+      background-color: #2c2c2c;
+      width: 310px;
+  }
+
+  .cont-1:hover {
+      background-color: #a7a7a7;
+      cursor: pointer;
+      transition: background-color 1.2s;
+  }
+
+  .bdspan {
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      text-align: center;
+      position: relative;
+      left: 25px;
+      top: 25px;
+  }
+
+  .mostrartodo {
+      position: relative;
+      left: 60%;
+  }
+
+  .recent {
+      border-radius: 5px;
+      background-color: #242424;
+  }
+
+  .recent img {
+      position: relative;
+      top: 15px;
+      left: 20px;
+      width: 200px;
+      height: 200px;
+      border-radius: 5px;
+  }
+
+  .bdspan-2 {
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      text-align: center;
+      position: relative;
+      left: 85px;
+      top: 25px;
+  }
+
+  .info {
+      color: #ccc;
+      font-size: 15px;
+      text-align: center;
+      position: relative;
+      top: 25px;
+  }
+
   /* -------------------------------------------------------------- FOOTER -------------------------------------------------------------- */
   footer {
       position: fixed;
@@ -88,13 +156,13 @@
       margin-top: auto;
       color: white;
       transition: color 1.2s;
-    
+
   }
 
   footer .mx-4:hover {
       color: #a7a7a7;
       transition: color 1.2s;
-   
+
   }
 
   .processbar {
@@ -152,19 +220,25 @@
       margin-top: -6px;
       box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
   }
-  /* -------------------------------------------------------------- MAIN -------------------------------------------------------------- */
-  main{
-    background-image: linear-gradient(to bottom, #94c3ee, #75a9c5, #5f8d9d, #4f7278, #425757, #3c4b4a, #363f3e, #303433, #303433, #303433, #303433, #303433);
-  }
-.cont-1{
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+/*---------------------------------------------------------------- ASIDE ----------------------------------------------------------------*/
+aside{
+    margin: 25px;
     border-radius: 10px;
-    background-color: transparent;
 }
-.bdspan{
-color: white;
-font-weight: bold;
-font-size: 20px;
-text-align: center;
 
-}
+
+
+  /* -------------------------------------------------------------------------------------------------- SCROLL -------------------------------------------------------------- */
+  ::-webkit-scrollbar {
+      width: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background-color: #555;
+      border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-track {
+      background-color: #1a1a1a;
+
+  }

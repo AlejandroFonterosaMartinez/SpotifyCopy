@@ -1,42 +1,32 @@
-// // Datos de las canciones
-// const songs = [
-//     { title: "Song 1", artist: "Artist 1", src: "song1.mp3", cover: "cover1.jpg" },
-//     { title: "Song 2", artist: "Artist 2", src: "song2.mp3", cover: "cover2.jpg" },
-//     { title: "Song 3", artist: "Artist 3", src: "song3.mp3", cover: "cover3.jpg" },
-//     // Agrega más canciones aquí
-// ];
+// script.js
 
-// // Elementos del reproductor
-// const audioElement = document.querySelector("audio");
-// const songTitleElement = document.querySelector(".text-lg.font-semibold");
-// const artistElement = document.querySelector(".text-gray-500");
-// const coverImageElement = document.querySelector("img");
+// Function to handle adding a song to favorites
+function addToFavorites(songElement) {
+    // Your code to add the song to favorites
+    console.log("Added to favorites:", songElement.textContent);
+}
 
-// let currentSongIndex = 0;
+// Function to handle creating a playlist
+function createPlaylist(songElement) {
+    // Your code to create a playlist
+    console.log("Created playlist with:", songElement.textContent);
+}
 
-// // Función para cargar y reproducir una canción
-// function loadSong(songIndex) {
-//     const song = songs[songIndex];
-//     audioElement.src = song.src;
-//     songTitleElement.textContent = song.title;
-//     artistElement.textContent = song.artist;
-//     coverImageElement.src = song.cover;
-//     audioElement.play();
-// }
+// Function to handle playing a song
+function playSong(songElement) {
+    // Your code to start playing the song
+    console.log("Playing:", songElement.textContent);
+}
 
-// // Cargar la primera canción al cargar la página
-// loadSong(currentSongIndex);
+// Add event listeners to various song elements
+document.addEventListener("DOMContentLoaded", function () {
+    const songElements = document.querySelectorAll(".bdspan, .bdspan-2"); // Replace with actual class names
 
-// // Botón para cambiar a la siguiente canción
-// const nextButton = document.getElementById("next-button");
-// nextButton.addEventListener("click", () => {
-//     currentSongIndex = (currentSongIndex + 1) % songs.length;
-//     loadSong(currentSongIndex);
-// });
-
-// // Botón para cambiar a la canción anterior
-// const prevButton = document.getElementById("prev-button");
-// prevButton.addEventListener("click", () => {
-//     currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
-//     loadSong(currentSongIndex);
-// });
+    songElements.forEach(songElement => {
+        songElement.addEventListener("click", function () {
+            addToFavorites(songElement);
+            createPlaylist(songElement);
+            playSong(songElement);
+        });
+    });
+});

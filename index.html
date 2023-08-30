@@ -4,25 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
         integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <title>Spoty Copia</title>
-    <style>
-        body,
-        html {
-            height: 100%;
-        }
-    </style>
+
 </head>
 
-<body class="flex h-screen">
-
-
-
-
-    <nav class="w-1/6 bg-gray-900 text-white p-4 z-0">
+<body class="flex h-screen overflow-x-hidden">
+    <nav class="w-1/6 text-white p-4 ">
         <!-- <h1 class="text-3xl font-bold mb-10"><i class="bi bi-spotify logo"></i></h1> -->
         <ul class="space-y-4" id="sample">
             <li><a href="#" class="menu-link"><i class="bi bi-house-fill"></i>&nbsp; Home</a></li>
@@ -37,59 +29,124 @@
     </nav>
 
 
-    <main class="flex-grow p-4 w-1/5 ">
-        <h1 class="text-3xl font-bold mb-10 text-white">Buenos días</h1>
-        <div class="w-full h-1/2 mb-4 grid grid-cols-1 md:grid-cols-3 md:gap-10 p-4">
+    <main class="flex-grow p-4 w-full md:w-4/5 mr-3" style="overflow-y: scroll;">
+        <div class="flex-grow mb-8">
+            <button class="rounded mr-3"><i class="bi bi-chevron-left"></i></button>
+            <button class="rounded"><i class="bi bi-chevron-right"></i></button>
+            <button class="rounded btn_lft"><i class="bi bi-people"></i></button>
+            <button class="rounded btn_lft"><i class="bi bi-person-circle"></i></button>
+
+        </div>
+        <h1 class="text-3xl font-bold mb-2 text-white mr-10">Buenos días</h1>
+        <div class="w-full h-1/4  grid grid-cols-3 mb-12  gap-2 p-4">
             <!-- Primer cuadrado -->
             <div class="h-20 cont-1 flex flex-col justify-between md:w-30 relative">
-                <img src="img.png" alt="Imagen" class="absolute inset-0 w-25 h-20">
-                <span class="bdspan">Estrella</span>
+                <img src="img.jpg" alt="Imagen" class="absolute inset-0 w-25 h-20">
+                <span class="bdspan">Canción</span>
             </div>
 
             <!-- Segundo cuadrado -->
             <div class="h-20 cont-1 flex flex-col justify-between md:w-30 relative">
-                <img src="img.png" alt="Imagen" class="absolute inset-0 w-25 h-20">
-                <span class="bdspan">Estrella</span>
+                <img src="img.jpg" alt="Imagen" class="absolute inset-0 w-25 h-20">
+                <span class="bdspan">Canción</span>
             </div>
             <!-- Tercer cuadrado -->
             <div class="h-20 cont-1 flex flex-col justify-between md:w-30 relative">
-                <img src="img.png" alt="Imagen" class="absolute inset-0 w-25 h-20">
-                <span class="bdspan">Estrella</span>
+                <img src="img.jpg" alt="Imagen" class="absolute inset-0 w-25 h-20">
+                <span class="bdspan">Canción</span>
             </div>
             <!-- Cuarto cuadrado -->
             <div class="h-20 cont-1 flex flex-col justify-between md:w-30 relative">
-                <img src="img.png" alt="Imagen" class="absolute inset-0 w-25 h-20">
-                <span class="bdspan">Estrella</span>
+                <img src="img.jpg" alt="Imagen" class="absolute inset-0 w-25 h-20">
+                <span class="bdspan">Canción</span>
             </div>
 
             <!-- quinto cuadrado -->
             <div class="h-20 cont-1 flex flex-col justify-between md:w-30 relative">
-                <img src="img.png" alt="Imagen" class="absolute inset-0 w-25 h-20">
-                <span class="bdspan">Estrella</span>
+                <img src="img.jpg" alt="Imagen" class="absolute inset-0 w-25 h-20">
+                <span class="bdspan">Canción</span>
             </div>
             <!-- Sexto cuadrado -->
             <div class="h-20 cont-1 flex flex-col justify-between md:w-30 relative">
-                <img src="img.png" alt="Imagen" class="absolute inset-0 w-25 h-20">
-                <span class="bdspan">Estrella</span>
+                <img src="img.jpg" alt="Imagen" class="absolute inset-0 w-25 h-20">
+                <span class="bdspan">Canción</span>
             </div>
         </div>
-        <h1 class="text-3xl font-bold mb-10 text-white">Lo último</h1>
-        <!-- Div abajo  con cuadrícula de divs -->
-        <div class="w-full h-1/3   grid grid-cols-5  gap-12 p-4">
+
+        <h1 class="text-3xl font-bold mb-2 text-white ">Escuchado recientemente
+            <span class="text-sm text-gray-400 mostrartodo cursor-pointer">Mostrar todo</span>
+        </h1>
+
+
+        <!--Div 2-->
+        <div class="  w-full h-1/2  grid grid-cols-4 p-4 ">
             <!-- Primer cuadrado -->
-            <div class="bg-blue-300 h-30 w-60"></div>
-
+            <div class="h-80  w-60 recent">
+                <img src="img.jpg" alt="Imagen" class="
+                 w-25 h-20">
+                <span class="bdspan-2">Canción</span>
+                <p class="info">Cantante</p>
+            </div>
             <!-- Segundo cuadrado -->
-            <div class="bg-green-300 h-30  w-60"></div>
+            <div class="h-80  w-60 recent">
+                <img src="img.jpg" alt="Imagen" class="
+                 w-25 h-20">
+                <span class="bdspan-2">Canción</span>
+                <p class="info">Cantante</p>
+            </div>
             <!-- Tercer cuadrado -->
-            <div class="bg-yellow-300 w-60 h-30  "></div>
+            <div class="h-80  w-60 recent">
+                <img src="img.jpg" alt="Imagen" class="
+                 w-25 h-20">
+                <span class="bdspan-2">Canción</span>
+                <p class="info">Cantante</p>
+            </div>
             <!-- Cuarto cuadrado -->
-            <div class="bg-red-300   w-60 h-30"></div>
-            <div class="bg-purple-300   w-60 h-30"></div>
-            <!-- Puedes agregar más cuadrados según sea necesario -->
+            <div class="h-80  w-60 recent">
+                <img src="img.jpg" alt="Imagen" class="
+                 w-25 h-20">
+                <span class="bdspan-2">Canción</span>
+                <p class="info">Cantante</p>
+            </div>
         </div>
-    </main>
 
+        <h1 class="text-3xl font-bold mb-2 text-white ">Top mixes
+            <span class="text-sm text-gray-400 mostrartodo cursor-pointer">Mostrar todo</span>
+        </h1>
+        <!-- Div 3-->
+        <div class="  w-full h-1/2  grid grid-cols-4 p-4 ">
+            <!-- Primer cuadrado -->
+            <div class="h-80  w-60 recent">
+                <img src="img.jpg" alt="Imagen" class="
+                 w-25 h-20">
+                <span class="bdspan-2">Canción</span>
+                <p class="info">Cantante</p>
+            </div>
+            <!-- Segundo cuadrado -->
+            <div class="h-80  w-60 recent">
+                <img src="img.jpg" alt="Imagen" class="
+                 w-25 h-20">
+                <span class="bdspan-2">Canción</span>
+                <p class="info">Cantante</p>
+            </div>
+            <!-- Tercer cuadrado -->
+            <div class="h-80  w-60 recent">
+                <img src="img.jpg" alt="Imagen" class="
+                 w-25 h-20">
+                <span class="bdspan-2">Canción</span>
+                <p class="info">Cantante</p>
+            </div>
+            <!-- Cuarto cuadrado -->
+            <div class="h-80  w-60 recent">
+                <img src="img.jpg" alt="Imagen" class="
+                 w-25 h-20">
+                <span class="bdspan-2">Canción</span>
+                <p class="info">Cantante</p>
+            </div>
+        </div>
+     
+    </main>
+   
 
     <footer class="fixed bottom-0 left-0 w-full z-50 bg-black p-2">
 
